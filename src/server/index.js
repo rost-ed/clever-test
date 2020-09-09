@@ -59,6 +59,33 @@ const renderFullPage = (html, preloadedState) => {
 
 app.get('/', handleRequest)
 
+app.get('/form-meta', (req, res) => {
+  res.send(JSON.stringify(
+    {
+      "title": "Форма тестового задания",
+      "image": "http://test.clevertec.ru/tt/image.png",
+      "fields": [
+        {
+          "title": "Текстовое поле", "name": "text", "type": "TEXT"
+        },
+        { "title": "Числовое поле", "name": "numeric", "type": "NUMERIC" },
+        {
+          "title": "Поле выбора одного значения из списка",
+          "name": "list",
+          "type": "LIST",
+          "values": {
+            "none": "Не выбрано",
+            "v1": "Первое значение",
+            "v2": "Второе значение",
+            "v3": "Третье значение"
+          }
+        }]
+    }
+  ))
+})
+
+app.post('/form-submit', (req, res) => { res.send(JSON.stringify({ result:'oooooo' })) })
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })

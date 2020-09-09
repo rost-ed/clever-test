@@ -9,9 +9,8 @@ import FormPage from './components/Form';
 const App = () => {
   const {
     formData,
-    breakOperation,
   } = useSelector(
-    ({ formData, breakOperation }) => ({ formData, breakOperation })
+    ({ formData }) => ({ formData })
   )
   const dispatch = useDispatch()
 
@@ -21,7 +20,7 @@ const App = () => {
 
   return (
     <div>
-      <SpinnerLayout breakHandler={breakOperation} />
+      <SpinnerLayout />
       <PopupLayout />
       {formData && <FormPage  { ...formData } />}
     </div>

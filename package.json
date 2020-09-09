@@ -5,7 +5,6 @@
   "license": "MIT",
   "dependencies": {
     "arui-feather": "^18.1.0",
-    "classnames": "^2.2.6",
     "express": "^4.17.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -29,7 +28,8 @@
     "style-loader": "^1.2.1",
     "svg-inline-loader": "^0.8.2",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "worker-loader": "^3.0.2"
   },
   "scripts": {
     "build-server": "babel src -d dist",

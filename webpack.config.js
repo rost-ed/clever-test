@@ -21,7 +21,11 @@ const commonRules = [
   {
     test: /\.svg$/,
     loader: 'svg-inline-loader'
-  }
+  },
+  {
+    test: /\.worker\.js$/,
+    use: { loader: 'worker-loader' },
+  },
 ]
 
 const serverConfig = {

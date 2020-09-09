@@ -1,0 +1,14 @@
+.form-wrap {
+  text-align: center;
+
+  &__form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  &__field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

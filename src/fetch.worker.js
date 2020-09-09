@@ -3,7 +3,6 @@ onmessage = function ({
     url, requestData
   }
 }) {
-  console.log(url, requestData)
   fetch(url, requestData)
     .then(resp => resp.json())
     .then(data => {

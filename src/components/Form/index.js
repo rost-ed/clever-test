@@ -23,7 +23,7 @@ const FormPage = ({ title, fields }) => {
     [field.name]: '',
   }), {})
   const [formData, setFormData] = useState(defaultData)
-  console.log(formData)
+  
   const changeHandler = (value, name, evt) => {
     evt.persist()
     setFormData((data) => ({

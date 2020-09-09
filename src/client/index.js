@@ -10,7 +10,6 @@ import App from '../App'
 
 
 const preloadedState = window.___PRELOADED_STATE___
-console.log(preloadedState)
 delete window.___PRELOADED_STATE___
 
 const sagaMiddleware = createSagaMiddleware()

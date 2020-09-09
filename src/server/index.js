@@ -59,7 +59,7 @@ const renderFullPage = (html, preloadedState) => {
 
 app.get('/', handleRequest)
 
-app.get('/form-meta', (req, res) => {
+app.post('/form-meta', (req, res) => {
   res.send(JSON.stringify(
     {
       "title": "Форма тестового задания",

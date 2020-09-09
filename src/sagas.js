@@ -8,6 +8,9 @@ function* fetchFormMeta() {
   try {
     const formMeta = yield fetchWithWorker(
       'http://test.clevertec.ru/tt/meta',
+      {
+        method: 'POST',
+      }
     )
 
     yield put(loadFormMetaSucceeded(formMeta))
